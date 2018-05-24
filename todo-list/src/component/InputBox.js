@@ -3,15 +3,20 @@ import React, { Component } from 'react';
 class InputBox extends Component{
 
     state = {
-        todoList : ''
+        todoInput : ''
+    }
+
+    handleCommit = (e) => {
+        
     }
 
     render(){
+        console.log(this.props.insertData);
         return(
             <div>
                 <input
-                    value={this.state.todoList}
-                    name="todoList"
+                    value={this.state.todoInput}
+                    name="todoInput"
                     placeholder="Todo List"
                 />
             </div>
