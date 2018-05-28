@@ -1,21 +1,24 @@
 import React, { Component } from 'react';
 
-class InputBox extends Component{
+class TodoInput extends Component{
 
     state = {
         todoInput : ''
     }
 
-    handleCommit = (e) => {
-        
+    handleChange = (e) => {
+        this.setState({
+            todoInput : e.target.value
+        });
     }
 
     render(){
-        console.log(this.props.insertData);
+
         return(
             <div>
                 <input
                     value={this.state.todoInput}
+                    onChange={this.handleChange}
                     name="todoInput"
                     placeholder="Todo List"
                 />
@@ -24,4 +27,4 @@ class InputBox extends Component{
     }
 
 }
-export default InputBox;
+export default TodoInput;
