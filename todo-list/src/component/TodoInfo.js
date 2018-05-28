@@ -1,17 +1,16 @@
 import React, {Component} from 'react';
 
-class TodoListInfo extends Component{
+class TodoInfo extends Component{
     static defaultProps = {
-        todoListInfo : {
-            index : '',
-            todo : '',
+        info : {
+            todo : ''
         }
     };
 
+
     render() {
         return (
-            
-
+            {info}
         )
     }
 
