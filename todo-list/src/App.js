@@ -1,19 +1,9 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import InputBox from "./component/InputBox";
+import TodoInput from "./component/TodoInput";
 
 class App extends Component {
-
-    state = {
-        list : [
-            {
-                index : '',
-                todo : ''
-            }
-        ]
-    }
-
 
   render() {
     return (
@@ -22,9 +12,8 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Todo List Sample</h1>
         </header>
-          <InputBox
+          <TodoInput
               name="todo"
-              insertData={this.state.list}
           />
       </div>
     );
